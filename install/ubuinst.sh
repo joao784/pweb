@@ -192,16 +192,16 @@ function install_continue {
 function install_continue2 {
 cd /bin || exit
 rm pweb > /dev/null 2>&1
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/pweb > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 clear
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
 cd /bin/ppweb || exit
 rm *.sh ver* > /dev/null 2>&1
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/verifatt.sh > /dev/null 2>&1
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/verpweb > /dev/null 2>&1
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/verweb > /dev/null 2>&1
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/whatsapp.sh > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/verifatt.sh > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/verpweb > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/verweb > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/whatsapp.sh > /dev/null 2>&1
 verp=$(sed -n '1 p' /bin/ppweb/verpweb| sed -e 's/[^0-9]//ig') &>/dev/null
 verw=$(sed -n '1 p' /bin/ppweb/verweb| sed -e 's/[^0-9]//ig') &>/dev/null
 echo -e "$verp" >/bin/ppweb/attpweb
@@ -244,7 +244,7 @@ curl -sS https://getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
 chmod +x /usr/local/bin/composer > /dev/null 2>&1
 cd /var/www/html || exit
-wget https://github.com/srSPEEDiness/PWEBTESTE/raw/main/install/gestorssh.zip > /dev/null 2>&1
+wget https://github.com/joao784/pweb/raw/main/install/gestorssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer install > /dev/null 2>&1
@@ -332,10 +332,10 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
 echo ""
-echo -e "WEB SONYC SSH" | figlet | boxes -d stone -p a0v0 | lolcat
+echo -e "WEB JM TECH" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mModificado por @sonycssh\033[1;36m" | lolcat
 echo ""
-chave=$(curl -sSL "https://raw.githubusercontent.com/srSPEEDiness/PWEBTESTE/main/install/chave") &>/dev/null
+chave=$(curl -sSL "https://raw.githubusercontent.com/joao784/pweb/main/install/chave") &>/dev/null
 
 read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
     
@@ -375,7 +375,7 @@ install_continue2
 	sed -i "s/#PasswordAuthentication no/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 } > /dev/null
 echo ""
-echo -e "WEB SONYC SSH" | figlet | boxes -d stone -p a0v0 | lolcat
+echo -e "WEB JM TECH" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mModificado por @sonycssh\033[1;36m" | lolcat
 echo ""
 echo -e "\033[1;36mDEFINA UMA NOVA SENHA PARA\033[0m" | lolcat
@@ -397,7 +397,7 @@ tst_bkp
 clear
 sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/8.1/apache2/php.ini > /dev/null 2>&1
 sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/8.1/apache2/php.ini > /dev/null 2>&1
-echo -e "PAINEL WEB SONYC SSH" | figlet | boxes -d stone -p a0v0 | lolcat
+echo -e "PAINEL JM TECH" | figlet | boxes -d stone -p a0v0 | lolcat
 echo -e "                              \033[1;31mModificado por @sonycssh\033[1;36m" | lolcat
 echo ""
 echo -e "\033[1;32mPAINEL INSTALADO COM SUCESSO!" | lolcat
